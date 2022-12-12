@@ -1,0 +1,212 @@
+body {
+    max-width: 1440px; /* colocar la max-width, solo asi los child elements se ajustan acorde al tamaño de la screen*/
+    padding: 0%;
+    margin: 0%;
+    font-family: "Inter";
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./Inter-Light.ttf"); /* cuando descargo una font mirar que extraiga en la carpeta static el grosor que quiero*/
+}
+
+header {
+    max-width: 100%;
+    display: inline-block;
+    justify-content: center;
+    margin: 7% 9%;
+}
+
+.tanya, .john {
+    display: inline-flex;
+    width: auto;
+} /*desde que pueda .. unir codigos*/
+
+
+
+.text , .text1 {
+    max-width: 58%; /* a los div tbn ponerles max width para que se ajusten al tamaño de la pag*/
+    font-size: 27px;
+     letter-spacing: 0.05ch;
+    font-weight: 500;
+    padding-top: 10%;
+    color: hsl(240, 29%, 27%);
+    line-height: 2.5ch;
+    z-index: 2;
+}  /* algunas veces el z index funciona solo si el item de encima tiene position relative*/
+
+
+.text p, .text1 p {
+    font-size: 22px;
+    font-weight: 700;
+} 
+
+
+.text p span, .text1 p span {
+    color: hsl(240, 18%, 77%);
+} 
+
+
+.imgg, .imggg {
+    z-index: 1;
+    max-width: 52%;
+    margin-left: -7%;
+}
+
+.a , .b, .c {
+   position:absolute;
+}
+
+.a {
+  top: 190px ;
+  left: 230px;
+}
+
+.b {
+    margin-top: -45% ;
+    margin-left: 42%;
+}
+
+.c {
+    top: 500px;
+}
+
+main {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .botones {
+    display: inline-flex;
+    margin-top: -15%;
+    z-index: 4; 
+    margin-left: 20%;
+}
+
+.bt1 button, .bt2 button {
+    width: 75px;
+    height:65px;
+    background-color: white;
+    background-image: url("./images/icon-prev.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow:;
+    cursor: -webkit-grab; 
+    border-style: none;
+    border-radius: 30px; 
+    filter: drop-shadow(1px 3px 1px hsl(0, 0%, 65%));/* con este creo el efecto en el boton*/
+}
+
+.bt2 button {
+    background-image: url("./images/icon-next.svg");
+    border-left-width: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}   /* con los ultimos 3 estilizo un lado del borde del boton para que quede plano y se pueda ver unido al otro */
+
+
+.bt1 button {
+    border-right-width: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}  /* con los ultimos 3 estilizo un lado del borde del boton para que quede plano y se pueda ver unido al otro */
+
+@media (max-width: 600px) {
+    body {
+        max-width: 375px; /* colocar la max-width, solo asi los child elements se ajustan acorde al tamaño de la screen*/
+    }
+    
+    header {
+        display: block;
+        margin: 2% 2%;
+        max-width: 100%;
+        margin: 10% 5% 5% 5%;
+    }
+    
+    .tanya, .john {
+        display:flex;
+        flex-direction: row-reverse;
+        max-width: 100%;
+        margin: 10% 5% 5% 5%;
+    } /*desde que pueda .. unir codigos*/
+    
+    
+.text , .text1 {
+    max-width: 110%; /* a los div tbn ponerles max width para que se ajusten al tamaño de la pag*/
+    width: 375px;
+    font-size: 16px;
+     letter-spacing: 0.05ch;
+    font-weight: 300;
+    padding: 50% 0% 0% 0%;
+    line-height: 2.5ch;
+    margin: 60% -10% 0% 0%;
+    text-align: center;
+}  
+
+
+.text p, .text1 p {
+    width: 40%;
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 30%;
+}  /* reduciendo el with y aumentando el padding left hago que texto de una misma linea se rompa en 2 o mas lineas*/
+
+.imgg, .imggg {
+    position: absolute;
+    max-width: 100%;
+    margin-left: 0%;
+}
+
+
+.imgg img, .imggg img {
+    max-width: 260px;
+    margin: 5% 0% 5% 0%;
+}
+
+
+.a, .b, .c {
+   position:absolute;
+   max-width: 100%;
+}
+
+.a {
+  top: 360px ;
+  left: 180px;
+  max-width: 12%;
+}
+
+.b {
+    max-width: 70%;
+    margin-top: 0% ;
+    margin-left: 0%;
+    top: 15px;
+    left: 30px;
+}
+
+.c {
+    top: 250px;
+    left: 60px;
+    max-width: 50%;
+}
+
+main {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .botones {
+    position: absolute;
+    margin-top: 5%;
+    top: 260px;
+    margin-left: 5%;
+}
+
+.bt1 button, .bt2 button {
+    width: 50px;
+    height:40px;
+}
+}
